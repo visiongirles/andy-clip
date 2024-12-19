@@ -1,0 +1,13 @@
+{
+  "name": "andy-clip",
+  "version": "1.0.0",
+  "description": "Server for clips creation on Twitch",
+  "type": "module",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kate Sychenko & Andrew Steatham",
+  "license": "ISC",
+  "dependencies": {}
+}
