@@ -9,5 +9,8 @@
   },
   "author": "Kate Sychenko & Andrew Steatham",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2"
+  }
 }
