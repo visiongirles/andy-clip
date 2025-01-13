@@ -7,12 +7,6 @@ const app = express();
 // Load the .env file
 dotenv.config();
 
-// Replace with your Twitch and Discord credentials
-// const TWITCH_CLIENT_ID = 'your_client_id';
-// const TWITCH_CLIENT_SECRET = 'your_client_secret';
-// const TWITCH_ACCESS_TOKEN = 'your_access_token'; // Get with clips:edit scope
-// const DISCORD_WEBHOOK_URL = 'your_discord_webhook_url';
-
 // Function to create a Twitch clip
 async function createTwitchClip(broadcasterId, title, duration) {
   try {
@@ -89,7 +83,7 @@ async function auth() {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
-    console.log('response from auth():', response);
+    // console.log('response from auth():', response);
 
     process.env.TWITCH_ACCESS_TOKEN = response.data.access_token;
     // console.log(
@@ -100,12 +94,4 @@ async function auth() {
     console.error(error);
     // res.status(500).json({ error: 'Failed to fetch data from Twitch API' });
   }
-  //   express.post('https://id.twitch.tv/oauth2/token', (req, res) =>  {
-  //      const params =  {    "client_id" : "hof5gwx0su6owfnys0yan9c87zr6t",
-  // "client_secret": "41vpdji4e9gif29md0ouet6fktd2",
-  // "grant_type" : "client_credentials"}
-  //     res.send(params)
-
-  //   })
-  //   const TWITCH_ACCESS_TOKEN =
 }
